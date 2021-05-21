@@ -1,0 +1,230 @@
+:root {
+  --ff-ss: arial;
+  --ff-s: times new roman;
+  --white-color: white;
+  --pink-color: #be3144;
+  --gray-color: #27282a;
+  --light-gray-color: #3a3d40;
+  --black-color: black;
+  --fw-m: 400;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+body {
+  font-size: 2.1rem;
+  color: var(--white-color);
+  margin: 0 auto;
+}
+#wrapping-div {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+/* navbar  */
+nav {
+  position: fixed;
+  min-width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: var(--pink-color);
+  font-family: var(--ff-ss);
+  text-align: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+nav ul li {
+  margin-right: 1em;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: var(--white-color);
+  padding: 1.5em 1em;
+}
+nav ul li a:hover {
+  background-color: var(--light-gray-color);
+}
+main {
+  position: absolute;
+  top: 10em;
+  right: 0em;
+  min-width: 100vw;
+  z-index: -1;
+}
+/* welcome-section  */
+#welcome-section {
+  background-image: linear-gradient(
+    72deg,
+    var(--light-gray-color) 30%,
+    var(--black-color) 100%
+  );
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#welcome-section > h1 {
+  font-size: 7rem;
+}
+#welcome-section > p {
+  color: var(--pink-color);
+  font-size: 4rem;
+}
+/* projects */
+#projects {
+  background-color: #45567d;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+}
+#projects a {
+  display: block;
+  font-size: 3rem;
+  color: var(--white-color);
+  transition: 1s ease-in-out;
+}
+#projects a:hover {
+  transform: scale(1.1);
+}
+/* project-wrapper */
+#project-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 0em;
+}
+#project-wrapper > * {
+  flex: 1 2 auto;
+  background-color: var(--light-gray-color);
+  box-shadow: 1.7em 0.5em 0.5em var(--gray-color);
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.projects > p {
+  padding: 0.3em 0.1em;
+  transition: all 6s ease-in-out;
+}
+.projects p > span {
+  display: none;
+}
+.projects p:hover > span {
+  display: inline;
+  color: var(--pink-color);
+  font-weight: var(--fw-m);
+}
+/* button  */
+#projects button {
+  display: inline-block;
+  all: unset;
+  padding: 1.1em 2em;
+  color: var(--white-color);
+  background-color: var(--gray-color);
+  font-family: var(--ff-ss);
+  cursor: pointer;
+  text-align: center;
+  transition: background 1s ease-in-out;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+#projects button:hover {
+  background-color: var(--pink-color);
+}
+#projects button:hover span {
+  position: relative;
+  top: 0em;
+  left: 0.3em;
+}
+/* contact */
+#contact {
+  background-color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+padding-bottom: 7em;
+}
+#contact > h1 {  font-size: 3rem; padding: 0.1em;}
+#contact > p {  font-size: 2.5rem; padding: 0.1em;}
+
+#contact ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2em;
+}
+#contact ul > h1{display: none;}
+#contact ul li{
+ padding: 0 1em;
+ font-size: 1em;
+ position: relative;
+ top: 0;
+ left:0;
+ transition: 1s ease-in-out;
+}
+#contact ul li a{
+text-decoration: none;
+color: var(--white-color);
+ }
+
+#contact  ul li:hover{
+  position: relative;
+  top: 1em;
+  left:0;
+ }
+ @media only screen and (min-width: 720px) {
+  nav ul {
+
+    flex-direction: row;
+    
+  }
+  main {
+
+    top: 0em;
+   
+  }
+  #projects a {
+
+    font-size: 4.5rem;
+  }
+  #contact > h1 {  font-size: 5rem; padding: 0.1em;}
+  #contact > p {  font-size: 3rem; padding: 0.1em;}
+  #contact ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  #contact ul > h1{display: none;}
+#contact ul li{
+ font-size: 1.5em;}
+
+  }
